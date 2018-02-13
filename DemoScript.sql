@@ -51,7 +51,7 @@ WHERE TransactionOccurredWhen >= '20150101' AND TransactionOccurredWhen < '20160
 SET STATISTICS IO OFF;
 GO
 
---B. Ok, let's see how they indexed this thing...
+--B. Ok, let's try an index
 --the cool kids' version
 EXEC master.dbo.sp_BlitzIndex 'WideWorldImporters', 'Warehouse', 'StockItemTransactions'
 
